@@ -6,21 +6,21 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
-	<title></title>
+	<title>Home</title>
 </head>
 <body>
 
 	<header>
 
 	<img src="{% static 'main/images/profile.jpg' %}" alt="Photo of Aaron Buzo">
-	<h1>Aaron Buzo - Sofware Developer</h1>
+	<h1>Aaron Buzo</h1>
 
 	<p>Software Developer</p>
 	<nav>
-		<a href="#about">About</a>
-		<a href="#skills">Skills</a>
-		<a href="#projects">Projects</a>
-		<a href="#contact">Contact</a>
+		<a href="{% url 'home' %}">Home</a>
+		<a href="{% url 'about' %}">About Me</a>
+		<a href="{% url 'projects' %}">Projects</a>
+		<a href="{% url 'contact' %}">Contact</a>
 	</nav>
 	</header>
 

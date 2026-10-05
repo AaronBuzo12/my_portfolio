@@ -67,7 +67,7 @@ nav a {
 	padding: 25px;
 	margin-top: 25px;
 	border-radius: 8px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 	transition: transform 0.3s ease;
 }
 
@@ -75,7 +75,7 @@ nav a {
 	transform: translateY(-5px);
 }
 
-.project-card h3 {
+.project-card h2 {
 	font-size: 24px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -235,3 +235,49 @@ header p {
 #contact {
 	margin-top: 40px;
 }
+
+
+
+
+
+
+
+/* Inner pages */
+
+main {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 60px 30px;
+}
+
+
+main section {
+	margin-bottom: 50px;
+}
+
+
+main h1 {
+	font-size: 45px;
+	margin-bottom: 20px;
+}
+
+
+main h2 {
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+
+main p{
+	font-size: 18px;
+	line-height: 1.7;
+}
+
+
+
+main .project-card {
+	margin-top: 30px;
+	padding: 25px;
+	border-radius: 8px;
+}
+
