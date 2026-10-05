@@ -118,6 +118,34 @@ footer {
 	nav a {
 		display: block;
 		margin: 10px 0;
+		padding: 10px;
+	}
+
+	header img {
+		width: 130px;
+		height: 130px;
+	}
+
+	header h2 {
+		font-size: 18px;
+	}
+
+	main {
+		padding: 40px 15px;
+	}
+
+	.project-card h2 {
+		font-size: 20px;
+	}
+
+	.project-card {
+		padding: 15px;
+	}
+
+
+	footer {
+		margin-top: 40px;
+		padding: 20px 10px;
 	}
 
 }
@@ -138,6 +166,10 @@ header img {
 nav a:hover {
 	color: #0077cc;
 	text-decoration: underline;
+}
+
+nav a:active {
+	transform: scale(0.95);
 }
 
 
@@ -281,3 +313,96 @@ main .project-card {
 	border-radius: 8px;
 }
 
+
+
+
+.home-buttons {
+	margin-top: 25px;
+}
+
+
+.home-buttons a {
+	display: inline-block;
+	padding: 12px 20px;
+	margin-right: 10px;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: 0.3s ease;
+}
+
+
+.home-buttons a:hover {
+	background-color: #0077cc;
+}
+
+
+
+#home {
+	text-align: center;
+	padding: 70px 30px;
+}
+
+
+#home h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+#home p {
+	max-width: 700px;
+	margin: 0 auto 15px;
+	line-height: 1.7;
+}
+
+
+
+
+.projects-button {
+	margin-top: 30px;
+	text-align: center;
+}
+
+
+
+.projects-button a {
+	display: inline-block;
+	padding: 12px 20px;
+	background-color: #0077cc;
+	color: white;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: 0.3s ease;
+}
+
+
+.projects-button a:hover {
+	background-color: #333;
+}
+
+
+#contact a {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 12px 20px;
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: 0.3s ease;
+}
+
+
+#contact a:hover {
+	background-color: #0077cc;
+}
+
+
+
+header h2 {
+	margin-top: 10px;
+	margin-bottom: 0;
+	color: #555;
+	font-size: 20px;
+}

@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Project
+from .forms import ContactMessageForm
 
 # Create your views here.
 
@@ -21,7 +23,31 @@ def projects(request):
 	return render(request, "main/projects.html", {"projects": projects})
 
 
+def project_detail(request, id):
+
+	project = Project.objects.get(id=id)
+	return render(request, "main/project_detail.html", {"project": project})
+
+
+
+
 def contact(request):
-	return render(request, "main/contact.html")
+	form = ContactMessageForm()
+
+	if request.method == "POST":
+
+		form = ContactMessageForm(request.POST)
+
+		if form.is_valid():
+			form.save()
+			messages.success(request, "Your message has been sent successfully!")
+			return redirect("contact")
+
+
+	return render(request, "main/contact.html", {"form":form}
+	)
+
+
+
 
 
