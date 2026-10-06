@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail
 from .models import Project
 from .forms import ContactMessageForm
 
@@ -39,7 +40,17 @@ def contact(request):
 		form = ContactMessageForm(request.POST)
 
 		if form.is_valid():
-			form.save()
+			contact_message = form.save()
+
+			send_mail(subject=f"New message from {contact_message.name}",
+
+			message=contact_message.message,
+
+			from_email=contact_message.email,
+
+			recipient_list=["aaronbuzo15@gmail.com"],
+			)
+
 			messages.success(request, "Your message has been sent successfully!")
 			return redirect("contact")
 
