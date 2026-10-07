@@ -18,10 +18,20 @@ def about(request):
 	return render(request, "main/about.html")
 
 
-
 def projects(request):
+	search = request.GET.get("search", "")
+
+
 	projects = Project.objects.all()
-	return render(request, "main/projects.html", {"projects": projects})
+
+	if search:
+		projects = projects.filter(
+			title__icontains=search) | projects.filter(
+			description__icontains=search
+			)
+
+	return render(request, "main/projects.html", { "projects": projects, "search": search,})	
+
 
 
 def project_detail(request, id):

@@ -20,6 +20,15 @@
 
 <main>
 
+	<form method="GET">
+		<input type="text" name="search"
+		placeholder="Search projects..."
+		value="{{ search }}">
+
+		<button type="submit">Search</button>
+
+	</form>
+
 	
     <section>
 	<h1>Projects</h1>
@@ -44,9 +53,7 @@
 
 	{% empty %}
 
-	<p>
-		No projects have been added yet.
-	</p>
+	<p>No projects found matching your search.</p>
 
 	{% endfor %}
 
